@@ -1,0 +1,12 @@
+/* Variáveis globais (cores, fontes, espaçamentos) */
+:root {
+    --primary: #6B0B8F;
+    --secondary: #9C27B0;
+    --accent: #CA4CE5;
+    --light-bg: #FFFFFF;
+    --dark-text: #2B2B2B;
+    --light-text: #6E6E6E;
+    --light-purple: #F8F5FF;
+    --dark-purple: #4A0B5E;
+    --border-radius: 12px;
+}

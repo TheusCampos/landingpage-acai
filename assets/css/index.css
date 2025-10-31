@@ -1,0 +1,10 @@
+/* Arquivo principal que consolida todos os estilos do site */
+@import url("./global/variables.css");
+@import url("./global/base.css");
+@import url("./global/layout.css");
+@import url("./global/components.css");
+
+@import url("./pages/sectionhome.css");
+@import url("./pages/customacai.css");
+@import url("./pages/about.css");
+@import url("./pages/testimonials.css");

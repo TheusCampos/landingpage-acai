@@ -1,0 +1,57 @@
+/* Imagens específicas da seção "Monte seu Açaí" em BEM */
+
+.custom-acai__image {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+@media (max-width: 992px) {
+    .custom-acai__image { max-width: 100%; }
+}
+
+/* ===== Monte seu Açaí ===== */
+.custom-acai {
+    /* Fallback: diagonal simples */
+    background: linear-gradient(135deg, var(--primary) 0 50%, #ffffff 50% 100%);
+    /* Novo: divisão ondulada em diagonal via máscara SVG */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Onda diagonal: usamos uma máscara SVG para revelar a cor primária em formato ondulado,
+   deixando o restante da seção com fundo branco (do próprio elemento). */
+.custom-acai::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--primary);
+    /* Máscara compatível com navegadores modernos */
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L1150,0 C1050,100 900,250 800,350 C650,500 400,650 0,900 L0,0 Z' fill='%23000'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L1150,0 C1050,100 900,250 800,350 C650,500 400,650 0,900 L0,0 Z' fill='%23000'/%3E%3C/svg%3E");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    z-index: 0;
+}
+
+.custom-acai > .container { position: relative; z-index: 1; }
+.custom-content { display: flex; align-items: center; gap: 4rem; }
+.custom-text { flex: 1; color: #ffffff; }
+.custom-title { font-size: 2.2rem; margin-bottom: 1.5rem; color: #ffffff; }
+.custom-desc { margin-bottom: 2rem; color: #ffffff; font-size: 1.05rem; }
+.custom-acai .btn { color: #ffffff; }
+.custom-acai .btn-primary { color: var(--primary); }
+.custom-ingredients { flex: 1; display: flex; align-items: center; justify-content: center; }
+.custom-ingredients .custom-image { width: 250%; max-width: 528px; height: auto; display: block; border-radius: var(--border-radius); }
+.ingredient { background-color: var(--primary); border-radius: 50%; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; margin: 0 auto; transition: all 0.3s ease; color: white; }
+.ingredient:hover { transform: translateY(-8px); background-color: var(--secondary); color: var(--accent); }
+.ingredient svg.icon-ingredient { width: 44px; height: 44px; display: block; }
+
+@media (max-width: 992px) { .custom-content { flex-direction: column; gap: 2rem; } .custom-ingredients .custom-image { max-width: 100%; } }
+@media (max-width: 640px) { .custom-title { font-size: 1.8rem; } .custom-desc { font-size: 1rem; } }

@@ -1,0 +1,138 @@
+/* Componentes globais (botões, placeholders, ações fixas) */
+
+/* Botões modernos com gradiente e profundidade (versão final) */
+.btn,
+.order-btn,
+.promo-btn {
+    position: relative;
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    perspective: 800px;
+    will-change: transform, box-shadow, background-position;
+    transition: transform 280ms ease-in-out, box-shadow 280ms ease-in-out, background-position 320ms ease-in-out, filter 280ms ease-in-out;
+    outline: none;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.btn-primary,
+.order-btn,
+.promo-btn {
+    background-image: linear-gradient(135deg, #ff00ff 0%, var(--accent) 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    color: var(--primary);
+    border: none;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.btn-secondary {
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.32) 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    color: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+.btn:hover,
+.btn:focus,
+.order-btn:hover,
+.order-btn:focus,
+.promo-btn:hover,
+.promo-btn:focus {
+    transform: perspective(800px) translateY(-3px) rotateX(-6deg) rotateY(6deg);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22);
+    background-position: 100% 50%;
+}
+
+.btn:active,
+.order-btn:active,
+.promo-btn:active {
+    transform: perspective(800px) translateY(0) scale(0.97);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+.btn::before,
+.order-btn::before,
+.promo-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 35%);
+    pointer-events: none;
+    opacity: 0.75;
+    transition: opacity 280ms ease-in-out;
+}
+.btn:hover::before,
+.btn:focus::before,
+.order-btn:hover::before,
+.order-btn:focus::before,
+.promo-btn:hover::before,
+.promo-btn:focus::before { opacity: 1; }
+
+.btn:focus-visible,
+.order-btn:focus-visible,
+.promo-btn:focus-visible {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.6), 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn,
+    .order-btn,
+    .promo-btn { transition: none; }
+    .btn:hover,
+    .btn:focus,
+    .btn:active,
+    .order-btn:hover,
+    .order-btn:focus,
+    .order-btn:active,
+    .promo-btn:hover,
+    .promo-btn:focus,
+    .promo-btn:active {
+        transform: none;
+        box-shadow: none;
+        background-position: 0% 50%;
+    }
+}
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5); }
+.whatsapp-btn .whatsapp-icon { width: 28px; height: 28px; display: block; color: #ffffff; }
+
+/* Placeholder de imagem com efeito shimmer */
+.img-placeholder {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.08), rgba(0,0,0,0.03));
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: inherit;
+}
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }

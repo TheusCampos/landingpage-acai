@@ -1,0 +1,187 @@
+/* Estilos específicos da página Home (imagens e decoração) seguindo BEM */
+
+/* Miniaturas dos cards de combo */
+.combo-card__thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Decorações da seção de Combos */
+.combos__decor-image {
+    position: absolute;
+    opacity: 1;
+    filter: none;
+    transform: none;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+.combos__decor-image--palmeira {
+    right: 0;
+    top: 4.75rem;
+    bottom: auto;
+    width: clamp(144px, 26.4vw, 312px);
+}
+.combos__decor-image--folha-esquerda {
+    left: 0;
+    bottom: 0;
+    width: clamp(144px, 26.4vw, 312px);
+}
+@media (max-width: 768px) {
+    .combos__decor-image--palmeira {
+        width: clamp(96px, 33.6vw, 216px);
+        top: 4.25rem;
+        bottom: auto;
+        right: 0.5rem;
+    }
+    .combos__decor-image--folha-esquerda {
+        width: clamp(96px, 33.6vw, 216px);
+        left: 0.5rem;
+        bottom: 0.5rem;
+    }
+}
+
+/* ===== Hero (Home) ===== */
+.hero {
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/736x/23/81/50/238150b109dc81c5f35fc31391226723.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    padding: 0 5%;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.28) 100%);
+    pointer-events: none;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+.hero > .container { position: relative; z-index: 1; }
+.hero .container { padding-left: 0; padding-right: 0; margin: 0; }
+.hero .section-divider { position: absolute; bottom: 0; left: 0; width: 100%; height: 90px; color: #ffffff; display: block; z-index: 1; pointer-events: none; }
+.hero .section-divider-bottom { transform: scaleY(-1); transform-origin: center; }
+.hero-content { text-align: left; color: white; z-index: 2; max-width: 800px; }
+.hero h1 { font-size: 3.2rem; margin-bottom: 1.5rem; line-height: 1.2; font-weight: 700; }
+.hero p { font-size: 1.1rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: 0; margin-right: 0; opacity: 0.9; }
+.hero-btns { display: flex; justify-content: flex-start; gap: 1.2rem; }
+
+/* ===== Cardápio (Menu) ===== */
+.menu { background-color: var(--light-bg); }
+.menu-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.5rem; }
+.menu-header .section-title { margin-bottom: 0; }
+.menu-title-image { height: 196px; width: auto; display: block; }
+.menu .section-subtitle { color: var(--light-text); margin-bottom: 1.25rem; }
+.menu .section-subtitle { color: var(--light-text); margin-bottom: 1.25rem; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; align-items: stretch; }
+.menu-card { background: #fff; border-radius: var(--border-radius); box-shadow: 0 8px 24px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06); padding: 1.25rem; }
+.menu-card-title { font-size: 1.1rem; color: var(--primary); margin-bottom: 0.75rem; }
+.menu-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.menu-item { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px dashed rgba(0,0,0,0.08); }
+.menu-item:last-child { border-bottom: none; }
+.menu-label { font-weight: 500; color: rgba(0,0,0,0.8); }
+.menu-ml { color: var(--light-text); font-weight: 500; margin-left: 0.35rem; font-size: 0.9rem; }
+.menu-price { font-weight: 600; color: var(--primary); }
+
+/* Toppings em duas colunas, com marcador visual */
+.menu-card.menu-toppings .menu-list { grid-template-columns: repeat(2, minmax(160px, 1fr)); }
+.menu-card.menu-toppings .menu-item { justify-content: flex-start; border-bottom: none; }
+.menu-card.menu-toppings .menu-label::before { content: '•'; color: var(--accent); margin-right: 0.5rem; display: inline-block; width: 1em; text-align: center; }
+
+/* Preços de extras em destaque */
+.menu-card.menu-extras .menu-price { color: var(--accent); }
+
+/* Rodapé do cardápio */
+.menu-footer { margin-top: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.menu-info { display: flex; gap: 1.25rem; color: var(--light-text); }
+.menu-phone, .menu-location { font-weight: 500; }
+
+@media (max-width: 768px) {
+    .menu-title-image { height: 72px; }
+    .menu-grid { grid-template-columns: 1fr; }
+    .menu-card { padding: 1rem; }
+    .menu-card-title { font-size: 1rem; }
+    .menu-footer { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+
+/* ===== Combos ===== */
+.combos { background-color: var(--light-bg); position: relative; overflow: hidden; }
+.combos .container { position: relative; z-index: 1; }
+.combos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+.combo-card { background-color: white; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.05); }
+.combo-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+.combo-img { height: 140px; background-color: var(--light-purple); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 4rem; }
+.combo-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.combo-content { padding: 1.2rem; }
+.combo-title { font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--primary); }
+.combo-desc { color: var(--light-text); margin-bottom: 1rem; font-size: 0.9rem; }
+.combo-price { font-weight: 600; color: var(--primary); font-size: 1.1rem; margin-bottom: 1rem; }
+
+/* Layout otimizado para 4 cards simultâneos em telas grandes */
+@media (min-width: 1024px) {
+    .combos { padding: 2.5rem 0; }
+    .combos .section-title { margin-bottom: 1.8rem; }
+    .combos-grid { grid-template-columns: repeat(4, minmax(220px, 1fr)); gap: 1.2rem; }
+    .combos__decor-image--palmeira { top: 2.25rem; bottom: auto; right: 0; }
+}
+@media (min-width: 1280px) { .combo-img { height: 150px; } .combo-content { padding: 1.2rem; } }
+
+/* ===== Promoções ===== */
+.promotions { position: relative; background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.0) 0%, rgba(255, 255, 255, 0.0) 100%), url('https://i.pinimg.com/1200x/91/f9/39/91f939253e2231b6dbfd20a1cf6fae46.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; }
+.promotions::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.72) 100%); pointer-events: none; }
+.promotions .container { position: relative; z-index: 1; }
+.promo-slider { max-width: 800px; margin: 0 auto; border-radius: var(--border-radius); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); overflow: hidden; }
+.promo-slide { background-color: white; padding: 3rem; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.promo-icon { width: 80px; height: 80px; background-color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 2rem; }
+.promo-title { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary); }
+.promo-desc { color: var(--light-text); margin-bottom: 1.8rem; max-width: 500px; }
+
+/* ===== Contato (dentro da Home) ===== */
+.contact { background-color: var(--primary); color: white; }
+.contact .section-title { color: white; }
+.contact .section-title:after { background-color: var(--accent); }
+.contact-content { display: flex; gap: 4rem; }
+.map { flex: 1; height: 400px; background-color: var(--light-purple); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.2rem; position: relative; overflow: hidden; }
+.map::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.38) 1.5px, transparent 0) 0 0 / 14px 14px; pointer-events: none; }
+.map-label { position: relative; z-index: 1; background: rgba(255, 255, 255, 0.75); color: var(--primary); padding: 0.4rem 0.75rem; border-radius: 999px; font-weight: 600; }
+.contact-form { flex: 1; }
+.form-group { margin-bottom: 1.5rem; }
+.form-control { width: 100%; padding: 1rem; border-radius: var(--border-radius); border: none; background-color: rgba(255, 255, 255, 0.1); color: white; font-family: 'Inter', sans-serif; font-size: 1rem; }
+.form-control::placeholder { color: rgba(255, 255, 255, 0.7); }
+.form-control:focus { outline: none; background-color: rgba(255, 255, 255, 0.15); }
+.social-links { display: flex; gap: 1rem; margin-top: 2rem; }
+.social-icon { width: 45px; height: 45px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; transition: all 0.3s ease; text-decoration: none; }
+.social-icon:hover { background-color: var(--accent); color: var(--primary); transform: translateY(-3px); }
+.social-icon svg { width: 22px; height: 22px; display: block; }
+
+/* Responsividade da Home */
+@media (max-width: 992px) {
+    .hero h1 { font-size: 2.8rem; }
+    .custom-content, .about-content, .contact-content { flex-direction: column; }
+    .custom-text, .about-text { text-align: center; margin-bottom: 3rem; }
+    .about-img { width: 100%; }
+    .map { width: 100%; }
+}
+@media (max-width: 768px) {
+    .hero-btns { flex-direction: column; align-items: center; }
+    .btn { width: 100%; max-width: 250px; text-align: center; }
+    .features { grid-template-columns: 1fr; }
+}
+@media (max-width: 576px) {
+    .menu-title-image { height: 60px; }
+    .hero h1 { font-size: 2.2rem; }
+    .section-title { font-size: 1.8rem; }
+    .promo-slide { padding: 2rem; }
+}
+@media (min-width: 1024px) {
+    .combos__decor-image--palmeira { top: 2.25rem; bottom: auto; right: 0; }
+}

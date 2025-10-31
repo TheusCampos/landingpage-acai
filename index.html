@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Açaí Supreme — Energia e Sabor em Cada Camada</title>
+    
+    <!-- Favicon / Ícone da aba do navegador -->
+    <link rel="icon" href="assets/icons/logo.svg?v=1" type="image/svg+xml">
+    <link rel="shortcut icon" href="assets/icons/logo.svg?v=1" type="image/svg+xml">
+    <meta name="theme-color" content="#6B0B8F">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Mantemos Poppins/Inter como fallback opcional -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <!-- CSS principal consolidado -->
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo playfair-display-regular" aria-label="Açaí Supreme — Página inicial">
+            <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <!-- Marca: tigela de açaí estilizada -->
+                <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                <path d="M4 18c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+            Açaí<span>Supreme</span>
+        </a>
+
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#combos">Combos</a></li>
+                <li><a href="#custom">Monte seu Açaí</a></li>
+                <li><a href="#promotions">Promoções</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li class="nav-order"><button class="order-btn">Fazer Pedido</button></li>
+            </ul>
+        </nav>
+
+        <button class="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="primary-nav">
+            <!-- ícone hamburger -->
+            <svg class="icon icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <!-- ícone fechar -->
+            <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+
+        <!-- Overlay para menu responsivo -->
+        <div class="menu-overlay" aria-hidden="true"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>JÁ TOMOU SEU AÇAÍ HOJE?</h1>
+                <p>Energia, sabor e qualidade em cada camada.</p>
+                <div class="hero-btns">
+                    <a href="#combos" class="btn btn-primary">Ver Combos</a>
+                    <a href="#custom" class="btn btn-secondary">Monte o seu</a>
+                </div>
+            </div>
+        </div>
+        <!-- Divisor de seção em SVG (cor branca) -->
+        <svg class="section-divider section-divider-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M0,32L80,48C160,64,320,96,480,96C640,96,800,64,960,64C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" fill="currentColor" />
+        </svg>
+    </section>
+
+    <!-- Cardápio Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="menu-header">
+                <h2 class="section-title">Cardápio</h2>
+                <img src="assets/img/acai.png" alt="Açaí decorativo" class="menu-title-image" loading="lazy">
+            </div>
+            <p class="section-subtitle">Monte seu açaí do seu jeito</p>
+
+            <div class="menu-grid" role="list">
+                <!-- Tamanhos -->
+                <article class="menu-card menu-sizes" aria-labelledby="menu-sizes-title" role="listitem">
+                    <h3 id="menu-sizes-title" class="menu-card-title">Tamanhos</h3>
+                    <ul class="menu-list" aria-label="Opções de tamanho">
+                        <li class="menu-item">
+                            <span class="menu-label">Pequeno <span class="menu-ml">300ml</span></span>
+                            <span class="menu-price">R$ 12,90</span>
+                        </li>
+                        <li class="menu-item">
+                            <span class="menu-label">Médio <span class="menu-ml">400ml</span></span>
+                            <span class="menu-price">R$ 15,90</span>
+                        </li>
+                        <li class="menu-item">
+                            <span class="menu-label">Grande <span class="menu-ml">500ml</span></span>
+                            <span class="menu-price">R$ 17,90</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Acompanhamentos -->
+                <article class="menu-card menu-toppings" aria-labelledby="menu-toppings-title" role="listitem">
+                    <h3 id="menu-toppings-title" class="menu-card-title">Acompanhamentos</h3>
+                    <ul class="menu-list" aria-label="Acompanhamentos disponíveis">
+                        <li class="menu-item"><span class="menu-label">Banana</span></li>
+                        <li class="menu-item"><span class="menu-label">Paçoca</span></li>
+                        <li class="menu-item"><span class="menu-label">Granola</span></li>
+                        <li class="menu-item"><span class="menu-label">Leite condensado</span></li>
+                        <li class="menu-item"><span class="menu-label">Leite em pó</span></li>
+                        <li class="menu-item"><span class="menu-label">Cobertura de chocolate</span></li>
+                        <li class="menu-item"><span class="menu-label">Cobertura de morango</span></li>
+                        <li class="menu-item"><span class="menu-label">Confetes</span></li>
+                        <li class="menu-item"><span class="menu-label">Chocolate em pó</span></li>
+                        <li class="menu-item"><span class="menu-label">Doce de leite</span></li>
+                    </ul>
+                </article>
+
+                <!-- Extras -->
+                <article class="menu-card menu-extras" aria-labelledby="menu-extras-title" role="listitem">
+                    <h3 id="menu-extras-title" class="menu-card-title">Extras</h3>
+                    <ul class="menu-list" aria-label="Itens extras com preço">
+                        <li class="menu-item"><span class="menu-label">Morango</span><span class="menu-price">R$ 4,90</span></li>
+                        <li class="menu-item"><span class="menu-label">Kiwi</span><span class="menu-price">R$ 4,90</span></li>
+                        <li class="menu-item"><span class="menu-label">Creme de avelã</span><span class="menu-price">R$ 5,90</span></li>
+                        <li class="menu-item"><span class="menu-label">Castanhas</span><span class="menu-price">R$ 5,90</span></li>
+                        <li class="menu-item"><span class="menu-label">Cerejas</span><span class="menu-price">R$ 6,90</span></li>
+                        <li class="menu-item"><span class="menu-label">Chocolate</span><span class="menu-price">R$ 6,90</span></li>
+                        <li class="menu-item"><span class="menu-label">Chantilly</span><span class="menu-price">R$ 6,90</span></li>
+                        <li class="menu-item"><span class="menu-label">Sorvete</span><span class="menu-price">R$ 6,90</span></li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="menu-footer">
+                <a href="#contact" class="btn order-btn">Fazer Pedido</a>
+                <div class="menu-info" aria-label="Contato e localização">
+                    <span class="menu-phone">(11) 9999-9999</span>
+                    <span class="menu-location">Rua da TI, FRONT-END</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combos Section -->
+    <section class="combos" id="combos">
+        <div class="container">
+            <h2 class="section-title">Nossos Combos Exclusivos</h2>
+                <div class="combos-grid">
+                <div class="combo-card">
+                    <div class="combo-img">
+                        <div class="img-placeholder" aria-hidden="true"></div>
+                        <img class="lazy-img combo-card__thumbnail" src="" data-src="https://i.pinimg.com/736x/4d/88/1c/4d881c67c7beab51f4802dd5380b21a8.jpg" alt="Açaí tradicional com banana e granola em tigela" loading="lazy" decoding="async">
+                    </div>
+                    <div class="combo-content">
+                        <h3 class="combo-title">Combo Tradicional</h3>
+                        <p class="combo-desc">Açaí puro com banana e granola</p>
+                        <div class="combo-price">R$ 18,90</div>
+                        <button class="order-btn">Fazer Pedido</button>
+                    </div>
+                </div>
+                
+                <div class="combo-card">
+                    <div class="combo-img">
+                        <div class="img-placeholder" aria-hidden="true"></div>
+                        <img class="lazy-img combo-card__thumbnail" src="" data-src="https://i.pinimg.com/736x/4d/88/1c/4d881c67c7beab51f4802dd5380b21a8.jpg" alt="Açaí com morangos e bananas fatiadas" loading="lazy" decoding="async">
+                    </div>
+                    <div class="combo-content">
+                        <h3 class="combo-title">Combo Frutas</h3>
+                        <p class="combo-desc">Açaí com morango, banana e leite condensado</p>
+                        <div class="combo-price">R$ 22,90</div>
+                        <button class="order-btn">Fazer Pedido</button>
+                    </div>
+                </div>
+                
+                <div class="combo-card">
+                    <div class="combo-img">
+                        <div class="img-placeholder" aria-hidden="true"></div>
+                        <img class="lazy-img combo-card__thumbnail" src="" data-src="https://i.pinimg.com/736x/4d/88/1c/4d881c67c7beab51f4802dd5380b21a8.jpg" alt="Açaí com paçoca, leite ninho e castanhas" loading="lazy" decoding="async">
+                    </div>
+                    <div class="combo-content">
+                        <h3 class="combo-title">Combo Energia</h3>
+                        <p class="combo-desc">Açaí com paçoca, leite ninho e castanhas</p>
+                        <div class="combo-price">R$ 24,90</div>
+                        <button class="order-btn">Fazer Pedido</button>
+                    </div>
+                </div>
+                
+                <div class="combo-card">
+                    <div class="combo-img">
+                        <div class="img-placeholder" aria-hidden="true"></div>
+                        <img class="lazy-img combo-card__thumbnail" src="" data-src="https://i.pinimg.com/736x/4d/88/1c/4d881c67c7beab51f4802dd5380b21a8.jpg" alt="Açaí Supreme com coberturas variadas e frutas" loading="lazy" decoding="async">
+                    </div>
+                    <div class="combo-content">
+                        <h3 class="combo-title">Combo Supreme</h3>
+                        <p class="combo-desc">Açaí com todas as coberturas e frutas</p>
+                        <div class="combo-price">R$ 29,90</div>
+                        <button class="order-btn">Fazer Pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decoração: imagem de folha no canto direito da seção -->
+        <img class="section-decor section-decor-palmeira combos__decor-image combos__decor-image--palmeira" src="assets/img/Folha.jpg" alt="Folha decorativa" aria-hidden="true" loading="lazy" decoding="async">
+        <!-- Decoração replicada: folha no canto inferior esquerdo da seção -->
+        <img class="section-decor section-decor-folha-esquerda combos__decor-image combos__decor-image--folha-esquerda" src="assets/img/Folha.jpg" alt="Folha decorativa" aria-hidden="true" loading="lazy" decoding="async">
+    </section>
+
+    <!-- Promoções Section -->
+    <section class="promotions section-bg" id="promotions">
+        <div class="container">
+            <h2 class="section-title">Promoções do Momento</h2>
+            <div class="promo-slider">
+                <div class="promo-slide">
+                    <div class="promo-icon" aria-hidden="true">
+                        <svg class="icon-feature icon-confetti" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                            <path d="M12 2v3M4 6l2 2M20 6l-2 2M5 18l2-2M19 18l-2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="promo-title">Segunda do Açaí</h3>
+                    <p class="promo-desc">Toda segunda-feira, 20% de desconto em todos os combos!</p>
+                    <a href="#" class="promo-btn">Aproveitar Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monte seu Açaí Section -->
+    <section class="custom-acai" id="custom">
+        <div class="container">
+            <div class="custom-content">
+                <div class="custom-text">
+                    <h2 class="custom-title">Monte seu Açaí do Seu Jeito</h2>
+                    <p class="custom-desc">Escolha suas camadas, frutas e coberturas favoritas.</p>
+                    <a href="#" class="btn btn-primary">Começar Agora</a>
+                </div>
+                
+                <div class="custom-ingredients">
+                    <img src="assets/img/tres-copo-acai.png" alt="Imagem ilustrativa de açaí com frutas e coberturas" class="custom-image custom-acai__image" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avaliações Section -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+            <h2 class="section-title" id="testimonials-title">Quem Prova, Aprova!</h2>
+            <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Depoimentos" data-autoplay-interval="5000">
+                <div class="carousel-viewport" id="testimonials-viewport" aria-live="polite">
+                    <ul class="carousel-track" id="testimonials-track" role="list">
+                        <!-- Slides de depoimentos -->
+                        <li class="carousel-slide testimonial" role="listitem" aria-roledescription="slide" aria-label="1 de 8" data-rating="5">
+                            <div class="testimonial-card">
+                                <div class="client-avatar" aria-hidden="true">
+                                    <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                        <circle cx="12" cy="8" r="4" fill="currentColor"></circle>
+                                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="stars" aria-label="Avaliação: 5 de 5">★★★★★</div>
+                                    <p class="testimonial-text">O melhor açaí que já provei! Sempre fresco e com ótimo atendimento.</p>
+                                    <p class="client-name">Maria Silva <span class="client-role">Cliente</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide testimonial" role="listitem" aria-roledescription="slide" aria-label="2 de 8" data-rating="4">
+                            <div class="testimonial-card">
+                                <div class="client-avatar" aria-hidden="true">
+                                    <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                        <circle cx="12" cy="8" r="4" fill="currentColor"></circle>
+                                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="stars" aria-label="Avaliação: 4 de 5">★★★★☆</div>
+                                    <p class="testimonial-text">Atendimento excelente e variedade de coberturas. Voltarei sempre!</p>
+                                    <p class="client-name">João Pereira <span class="client-role">Cliente</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide testimonial" role="listitem" aria-roledescription="slide" aria-label="3 de 8" data-rating="5">
+                            <div class="testimonial-card">
+                                <div class="client-avatar" aria-hidden="true">
+                                    <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                        <circle cx="12" cy="8" r="4" fill="currentColor"></circle>
+                                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="stars" aria-label="Avaliação: 5 de 5">★★★★★</div>
+                                    <p class="testimonial-text">Sabor incrível e ingredientes frescos. Recomendo para todos!</p>
+                                    <p class="client-name">Ana Costa <span class="client-role">Cliente</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide testimonial" role="listitem" aria-roledescription="slide" aria-label="4 de 8" data-rating="3">
+                            <div class="testimonial-card">
+                                <div class="client-avatar" aria-hidden="true">
+                                    <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                        <circle cx="12" cy="8" r="4" fill="currentColor"></circle>
+                                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="stars" aria-label="Avaliação: 3 de 5">★★★☆☆</div>
+                                    <p class="testimonial-text">Muito bom! Poderia ter mais opções de tamanhos.</p>
+                                    <p class="client-name">Carlos Souza <span class="client-role">Cliente</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide testimonial" role="listitem" aria-roledescription="slide" aria-label="5 de 8" data-rating="5">
+                            <div class="testimonial-card">
+                                <div class="client-avatar" aria-hidden="true">
+                                    <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                        <circle cx="12" cy="8" r="4" fill="currentColor"></circle>
+                                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="stars" aria-label="Avaliação: 5 de 5">★★★★★</div>
+                                    <p class="testimonial-text">Qualidade excepcional e entrega rápida. Nota máxima!</p>
+                                    <p class="client-name">Fernanda Lima <span class="client-role">Cliente</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide testimonial" role="listitem" aria-roledescription="slide" aria-label="6 de 8" data-rating="4">
+                            <div class="testimonial-card">
+                                <div class="client-avatar" aria-hidden="true">
+                                    <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                        <circle cx="12" cy="8" r="4" fill="currentColor"></circle>
+                                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="stars" aria-label="Avaliação: 4 de 5">★★★★☆</div>
+                                    <p class="testimonial-text">Produtos frescos e ambiente acolhedor. Muito bom!</p>
+                                    <p class="client-name">Rafael Martins <span class="client-role">Cliente</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide testimonial" role="listitem" aria-roledescription="slide" aria-label="7 de 8" data-rating="5">
+                            <div class="testimonial-card">
+                                <div class="client-avatar" aria-hidden="true">
+                                    <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                        <circle cx="12" cy="8" r="4" fill="currentColor"></circle>
+                                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="stars" aria-label="Avaliação: 5 de 5">★★★★★</div>
+                                    <p class="testimonial-text">Experiência incrível, recomendo para quem ama açaí!</p>
+                                    <p class="client-name">Juliana Alves <span class="client-role">Cliente</span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide testimonial" role="listitem" aria-roledescription="slide" aria-label="8 de 8" data-rating="4">
+                            <div class="testimonial-card">
+                                <div class="client-avatar" aria-hidden="true">
+                                    <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                        <circle cx="12" cy="8" r="4" fill="currentColor"></circle>
+                                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="stars" aria-label="Avaliação: 4 de 5">★★★★☆</div>
+                                    <p class="testimonial-text">Ótimas opções e sabores equilibrados. Adorei!</p>
+                                    <p class="client-name">Pedro Santos <span class="client-role">Cliente</span></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Controles do carrossel -->
+                <div class="carousel-controls">
+                    <button class="carousel-control prev" aria-label="Depoimento anterior" aria-controls="testimonials-track">
+                        <span class="sr-only">Anterior</span>
+                    </button>
+                    <button class="carousel-control next" aria-label="Próximo depoimento" aria-controls="testimonials-track">
+                        <span class="sr-only">Próximo</span>
+                    </button>
+                </div>
+                <!-- Indicadores -->
+                <div class="carousel-indicators" role="tablist" aria-label="Indicadores de depoimentos">
+                    <button class="indicator is-active" role="tab" aria-selected="true" aria-controls="testimonials-track" data-slide="0"><span class="sr-only">Depoimento 1</span></button>
+                    <button class="indicator" role="tab" aria-selected="false" aria-controls="testimonials-track" data-slide="1"><span class="sr-only">Depoimento 2</span></button>
+                    <button class="indicator" role="tab" aria-selected="false" aria-controls="testimonials-track" data-slide="2"><span class="sr-only">Depoimento 3</span></button>
+                    <button class="indicator" role="tab" aria-selected="false" aria-controls="testimonials-track" data-slide="3"><span class="sr-only">Depoimento 4</span></button>
+                    <button class="indicator" role="tab" aria-selected="false" aria-controls="testimonials-track" data-slide="4"><span class="sr-only">Depoimento 5</span></button>
+                    <button class="indicator" role="tab" aria-selected="false" aria-controls="testimonials-track" data-slide="5"><span class="sr-only">Depoimento 6</span></button>
+                    <button class="indicator" role="tab" aria-selected="false" aria-controls="testimonials-track" data-slide="6"><span class="sr-only">Depoimento 7</span></button>
+                    <button class="indicator" role="tab" aria-selected="false" aria-controls="testimonials-track" data-slide="7"><span class="sr-only">Depoimento 8</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="https://i.pinimg.com/736x/35/c2/05/35c2054d8cf6a4bcf572a3c708598cb8.jpg" alt="Imagem ilustrativa da Açaí Supreme" class="about-photo about__photo" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h2 class="about-title">Sobre Nós</h2>
+                    <p class="about-desc">Na Açaí Supreme, combinamos tradição e inovação para trazer até você a melhor experiência com açaí. Nossa missão é oferecer produtos de alta qualidade, com ingredientes selecionados e um sabor inesquecível.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg class="icon-feature icon-leaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M19 5c-5 0-10 3-12 8c2 2 6 2 8 0c2-2 4-4 4-8Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11 12c0 3-2 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Ingredientes Naturais</h4>
+                                <p>Selecionamos os melhores ingredientes para garantir qualidade e sabor.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg class="icon-feature icon-chef" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M7 10h10M8 14h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M6 9c0-3 3-5 6-5s6 2 6 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Sabor Artesanal</h4>
+                                <p>Receitas exclusivas preparadas com carinho e dedicação.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg class="icon-feature icon-truck" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <rect x="3" y="7" width="10" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M13 9h5l2 3v2h-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    <circle cx="7" cy="17" r="2" fill="currentColor"/>
+                                    <circle cx="18" cy="17" r="2" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Entregas Rápidas</h4>
+                                <p>Seu açaí fresquinho na porta da sua casa em minutos.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg class="icon-feature icon-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M12 4l2.5 5.5L20 10l-4 3.5L17 19l-5-3-5 3l1-5.5L4 10l5.5-0.5Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Atendimento Premium</h4>
+                                <p>Uma experiência completa do primeiro ao último contato.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Localização e Contato</h2>
+            <div class="contact-content">
+                <div class="map"><span class="map-label">Mapa do Google</span></div>
+                
+                <div class="contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="Seu telefone">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" placeholder="Sua mensagem"></textarea>
+                    </div>
+                    <button class="order-btn">Enviar Mensagem</button>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Telefone">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <rect x="7" y="2" width="10" height="20" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="19" r="1" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17" cy="7" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Pesquisar">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 20l-4.5-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Pedidos">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M6 9h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9Zm2-3a4 4 0 0 1 8 0v3H8V6Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content footer-center">
+                <div class="footer-logo">Açaí<span>Supreme</span></div>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Ajuda</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Açaí Supreme. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/5511999999999" class="whatsapp-btn" aria-label="Abrir conversa no WhatsApp">
+            <!-- Inline SVG for reliable coloring via currentColor and better accessibility control -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="whatsapp-icon" aria-hidden="true" focusable="false">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" fill="currentColor" />
+            </svg>
+        </a>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

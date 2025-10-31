@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Imagem não disponível">
+  <defs>
+    <linearGradient id="gf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EEEEEE"/>
+      <stop offset="100%" stop-color="#CCCCCC"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#gf)"/>
+  <g fill="#9E9E9E">
+    <rect x="250" y="200" width="300" height="200" rx="16" fill="#BDBDBD"/>
+    <circle cx="400" cy="300" r="40" />
+  </g>
+  <text x="50%" y="90%" text-anchor="middle" font-family="Saira, Poppins, sans-serif" font-size="24" fill="#757575">Imagem indisponível</text>
+</svg>

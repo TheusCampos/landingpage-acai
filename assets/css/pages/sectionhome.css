@@ -45,7 +45,9 @@
 
 /* ===== Hero (Home) ===== */
 .hero {
-    height: 100vh;
+    /* Use viewport seguro em mobile para evitar "espaços em branco" causados por barras do navegador */
+    height: auto;
+    min-height: 100svh;
     background-image: url('https://i.pinimg.com/736x/23/81/50/238150b109dc81c5f35fc31391226723.jpg');
     background-size: cover;
     background-position: center;
